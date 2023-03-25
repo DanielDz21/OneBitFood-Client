@@ -41,3 +41,9 @@ body {
     width: 95%;
   }
 }
+
+.clickable_effect:hover {
+  opacity: 0.8;
+  transform:scale(1.01);
+  cursor: pointer;
+}

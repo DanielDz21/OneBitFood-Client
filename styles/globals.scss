@@ -41,3 +41,19 @@ body {
     width: 95%;
   }
 }
+
+.clickable_effect:hover {
+  opacity: 0.9;
+  transform:scale(1.01);
+  cursor: pointer;
+}
+
+.no-link-style, .no-link-style:hover {
+  text-decoration: none;
+  color: inherit;
+}
+
+.responsive-image {
+  max-width: 100%;
+  height: auto;
+}

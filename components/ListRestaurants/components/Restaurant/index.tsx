@@ -6,16 +6,9 @@ import Link from "next/link"
 import { truncateString } from "@/services/truncateString"
 import { toCurrency } from "@/services/toCurrency"
 
-type RestaurantProps = {
-  id: number
-  image_url: string
-  name: string
-  description: string
-  category_title: string
-  delivery_tax: string
-}
 
-export function Restaurant({ id, image_url, name, description, category_title, delivery_tax }: RestaurantProps) {
+
+export function Restaurant({ id, image_url, name, description, category_title, delivery_tax }: Restaurant) {
   return (
     <Col lg={6} sm={6} xs={12} className="mb-4">
       <Link href={`restaurants/${id}`} className="no-link-style">
@@ -27,7 +20,7 @@ export function Restaurant({ id, image_url, name, description, category_title, d
                 alt={name}
                 width={300}
                 height={200}
-                layout="responsive"
+                className='responsive-image'
               />
             </Col>
             <Col md={5} xs={10}>

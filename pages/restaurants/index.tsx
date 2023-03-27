@@ -1,9 +1,7 @@
-import { ListRestaurants } from "@/components/ListRestaurants";
+import { ListRestaurants } from "@/components/ListRestaurants"
 
 export default function Restaurants() {
   return(
-    <>
-      <ListRestaurants />
-    </>
+    <ListRestaurants />
   )
 }

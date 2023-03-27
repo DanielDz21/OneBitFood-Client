@@ -1,7 +1,7 @@
-import useSWR from "swr";
+import useSWR from "swr"
 
 export function useGetRestaurants() {
-  const fetcher = (url: string) => fetch(url).then((r) => r.json());
+  const fetcher = (url: string) => fetch(url).then((r) => r.json())
 
   const { data, error } = useSWR<Restaurant[], string>(
     `${process.env.API_URL}/api/restaurants`,

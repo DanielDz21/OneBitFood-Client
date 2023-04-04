@@ -1,4 +1,4 @@
-import useSWR from "swr"
+import useSWR from 'swr'
 
 export function useGetRestaurants() {
   const fetcher = (url: string) => fetch(url).then((r) => r.json())

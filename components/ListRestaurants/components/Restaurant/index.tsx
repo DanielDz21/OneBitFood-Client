@@ -5,10 +5,15 @@ import Image from "next/image"
 import Link from "next/link"
 import { truncateString } from "@/services/truncateString"
 import { toCurrency } from "@/services/toCurrency"
+import { average } from "@/services/average"
 
+function getAverageRating(ratings: number[]) {
+  if (ratings.length === 0) return "--"
 
+  average(ratings)
+}
 
-export function Restaurant({ id, image_url, name, description, category_title, delivery_tax }: Restaurant) {
+export function Restaurant({ id, image_url, name, description, category_title, delivery_tax, ratings }: Restaurant) {
   return (
     <Col lg={6} sm={6} xs={12} className="mb-4">
       <Link href={`restaurants/${id}`} className="no-link-style">
@@ -20,7 +25,7 @@ export function Restaurant({ id, image_url, name, description, category_title, d
                 alt={name}
                 width={300}
                 height={200}
-                className='responsive-image'
+                className="responsive-image"
               />
             </Col>
             <Col md={5} xs={10}>
@@ -37,12 +42,12 @@ export function Restaurant({ id, image_url, name, description, category_title, d
             </Col>
             <Col md={2} xs={2} className="text-center">
               <span className="text-custom-orange">
-                <FaStar /> 5
+                <FaStar /> {getAverageRating(ratings)}
               </span>
             </Col>
           </Row>
         </Card>
       </Link>
     </Col>
-  );
+  )
 }

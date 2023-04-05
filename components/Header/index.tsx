@@ -1,5 +1,5 @@
-import Image from "next/image";
-import { Navbar } from "react-bootstrap";
+import Image from 'next/image'
+import { Navbar } from 'react-bootstrap'
 
 export function Header() {
   return (

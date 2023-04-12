@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { Navbar } from 'react-bootstrap'
+import { SearchBox } from '../SearchBox'
 
 export function Header() {
   return (
@@ -12,6 +13,11 @@ export function Header() {
           className='clickable_effect'
         />
       </Navbar.Brand>
+
+      <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+      <Navbar.Collapse id='responsive-navbar-nav' className='justify-content-end'>
+        <SearchBox />
+      </Navbar.Collapse>
     </Navbar>
   )
 }

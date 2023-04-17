@@ -3,6 +3,7 @@ import '@/styles/globals.scss'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { Container } from 'react-bootstrap'
+import { RecoilRoot } from 'recoil'
 
 export default function App({ Component, pageProps }: AppProps) {
   return(
@@ -16,7 +17,9 @@ export default function App({ Component, pageProps }: AppProps) {
         <Header />
 
         <Container className='mt-6'>
-          <Component {...pageProps} />
+          <RecoilRoot>
+            <Component {...pageProps} />
+          </RecoilRoot>
         </Container>
       </main>
     </>

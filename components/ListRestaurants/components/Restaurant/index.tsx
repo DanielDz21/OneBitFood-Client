@@ -5,13 +5,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { truncateString } from '@/services/truncateString'
 import { toCurrency } from '@/services/toCurrency'
-import { average } from '@/services/average'
-
-function getAverageRating(ratings: number[]) {
-  if (ratings.length === 0) return '--'
-
-  average(ratings)
-}
+import { getAverageRating } from '@/services/getAverageRating'
 
 export function Restaurant({ id, image_url, name, description, category_title, delivery_tax, ratings }: Restaurant) {
   return (

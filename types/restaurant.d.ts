@@ -1,3 +1,9 @@
+type ProductCategory = {
+  id: number
+  title: string
+  products: Product[]
+}
+
 type Restaurant = {
   id: number
   image_url: string
@@ -6,4 +12,5 @@ type Restaurant = {
   category_title: string
   delivery_tax: string
   ratings: number[]
+  product_categories: ProductCategory[]
 }

@@ -7,10 +7,10 @@ import { truncateString } from '@/services/truncateString'
 import { toCurrency } from '@/services/toCurrency'
 import { getAverageRating } from '@/services/getAverageRating'
 
-export function Restaurant({ id, image_url, name, description, category_title, delivery_tax, ratings }: Restaurant) {
+export function Restaurant({ slug, image_url, name, description, category_title, delivery_tax, ratings }: Restaurant) {
   return (
     <Col lg={6} sm={6} xs={12} className='mb-4'>
-      <Link href={`restaurants/${id}`} className='no-link-style'>
+      <Link href={`restaurants/${slug}`} className='no-link-style'>
         <Card body className='clickable_effect'>
           <Row>
             <Col md={5} xs={12}>

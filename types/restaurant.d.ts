@@ -8,6 +8,7 @@ type Restaurant = {
   id: number
   image_url: string
   name: string
+  slug: string
   description: string
   category_title: string
   delivery_tax: string
